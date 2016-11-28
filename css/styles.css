@@ -1,0 +1,33 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: futura;
+}
+
+/* For testing only */
+
+*:not(body):not(html) {
+  box-sizing:border-box;
+  border:1px dashed #000;
+}
+
+.columns {
+  max-width: 100%;
+  float: left;
+  margin-right: 1%;
+}
+
+.header {
+  text-align: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  img {
+    display: none;
+  }
+}
+/* End for testing */
