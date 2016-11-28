@@ -8,26 +8,71 @@ body {
   font-family: futura;
 }
 
-/* For testing only */
+h1 {
+  font-style: italic;
+}
 
-*:not(body):not(html) {
+/* For testing only */
+/*Uncomment below for test*/
+
+/**:not(body):not(html) {
   box-sizing:border-box;
   border:1px dashed #000;
-}
+}*/
 
-.columns {
-  max-width: 100%;
-  float: left;
-  margin-right: 1%;
-}
+/* End for testing */
 
-.header {
-  text-align: center;
-}
-
-@media screen and (min-width: 26.667em) and (max-width: 40em) {
-  img {
-    display: none;
+/*320px portrait is 26.6667em (smartphones)*/
+@media all and (max-width: 26.667em) {
+  .columns {
+    float:left;
+    width: 50%;
+    margin-right: .5em;
   }
 }
-/* End for testing */
+
+/*480px portrait is 48.000em (tablets)*/
+@media all and (min-width: 26.667em) and (max-width: 48.000em) {
+  .columns {
+    float: right;
+    width: 50%;
+  }
+  body {
+    background-color: #FF1F4F;
+  }
+}
+
+/*1280px landscape is 80.000em (laptops)*/
+@media all and (min-width: 48.000em) and (max-width: 80.000em) {
+  img {
+    width: 50%;
+    box-shadow: 0px 0px 10px 0px black;
+  }
+  body {
+    text-align: center;
+    background-color: #3D6AFF;
+  }
+}
+
+/*1680px landscape is 140.000em (desktops)*/
+@media all and (min-width: 80.000em) and (max-width: 140.000em) {
+  img {
+    box-shadow: 0px 0px 10px 0px black;
+  }
+  .columns {
+    width: 50%;
+    float: left;
+    margin-right: 1em;
+  }
+  body {
+    background-color: #FFEE6C;
+  }
+}
+
+@media all and (min-width: 140.0000em) {
+  .columns {
+    width: 25%;
+    float: left;
+    margin-right: 1em;
+  }
+}
